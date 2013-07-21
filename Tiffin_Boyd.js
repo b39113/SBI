@@ -1,5 +1,19 @@
-// alert("JavaScript works!");
+// START
 
-// GIT TEST
+// List Variables
 
-// Test 2
+// Procedure
+
+// Boolean Function
+
+// Number Function
+
+// String Function
+
+// Array Function
+
+// Returned Values
+
+// Output
+
+// FINISH
