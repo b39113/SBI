@@ -25,10 +25,11 @@ var maxLevel = 30;
 var myUser = {
     "fName" : "Mokono",
     "lName" : "Smith",
+    "heavyUser" : true,
     "curLevel" : 8,
     "tutOn" : false,
     "facebookSync": true,
-    "lastPlayed": 55,
+    "lastPlayed": 5,
     "lastLoggedInDays": function() {
         if (this.lastPlayed < 24) {
             console.log(this.fName + ", you were last on " + this.lastPlayed + " hours ago.");
@@ -39,5 +40,26 @@ var myUser = {
             console.log(this.fName + ", you were last on " + daysPlayed + " days ago");
         }
     },
-    "test": "Works"
+    "timeLogged" : function(timeLogged) {
+        if (timeLogged <= 18) {
+            this.heavyUser = true;
+            var powerUser = "You can't be stopped!!";
+            return powerUser;
+        } else {
+            this.heavyUser = false;
+        }
+    }
+    
 };
+ 
+
+
+
+
+
+
+
+
+// Output
+console.log("Hi " + myUser.lastLoggedInDays);
+console.log();
