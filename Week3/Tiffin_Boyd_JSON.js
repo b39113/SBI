@@ -15,8 +15,8 @@ var friendInfo = {
             "facebookSync": true
         },
         {
-            "fName": "Nora",
-            "lName": "King",
+            "fName": "Mokono",
+            "lName": "Smith",
             "curLevel": 2,
             "lastPlayed": 20,
             "facebookSync": false

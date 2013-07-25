@@ -52,12 +52,15 @@ var myUser = {
         "Cannon" : 2,
     }
 };
-var friendList = function(uName) {
+var friendList = function(uFName,uLName) {
     for (var key in friendInfo.gameFriends) {
-        if (friendInfo.gameFriends[key].fName === myUser.fName) {
-            console.log(friendInfo.gameFriends[key].fName + " is ahead of you at level " + friendInfo.gameFriends[key].curLevel);
+        if (friendInfo.gameFriends[key].fName === uFName) {
+            if (friendInfo.gameFriends[key].lName === uLName) {
+                console.log("You have a friend with the same first and last name as you! What are the odds?")
+                break;
+            }
+            console.log(friendInfo.gameFriends[key].fName + " " + friendInfo.gameFriends[key].lName +" has the same first name as you.");
         } else {
-            console.log(friendInfo.gameFriends[key].fName + " is behind you at level " + friendInfo.gameFriends[key].curLevel);
         }
     }
 }
@@ -72,9 +75,29 @@ var friendCount = function() {
     var fCount = friendInfo.gameFriends.length;
     return fCount;
 }
+var nestedLoop = function() {
+    for (i=0; i<5; i++) {
+        for (z=0; z<2; z++) {
+            console.log("i: " + i + " z: " + z);
+        }
+    }
+}
+var returnArray = function() {
+    var myArray = ["Tower 1", 12, "Cannon"]
+    return myArray;
+}
+var arrayFunction = function(arrayInput) {
+    var myObject = new Object();
+    myObject.name = arrayInput[0];
+    myObject.level = arrayInput[1];
+    myObject.type = arrayInput[2];
+    return myObject;
+}
 // Output
 console.log(myUser.lastLoggedInDays());
 console.log(myUser.timeLogged(myUser.lastPlayed));
 console.log(myUser.fName + ", You have " + friendCount() + " friends competing for the top spot.");
-console.log(friendList(myUser.fName));
+console.log(friendList(myUser.fName,myUser.lName));
 console.log(myTowers());
+console.log(nestedLoop());
+console.log (arrayFunction(returnArray()));
