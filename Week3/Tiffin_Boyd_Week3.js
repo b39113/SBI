@@ -20,13 +20,13 @@ You do not have the tutorials on, if you need any assistance, hit us up on faceb
 
 // Global Variables Defined
 var maxLevel = 30;
-
+var friendCount = friendInfo.gameFriends.length;
 //
 var myUser = {
     "fName" : "Mokono",
     "lName" : "Smith",
     "heavyUser" : true,
-    "curLevel" : 8,
+    "curLevel" : 10,
     "tutOn" : false,
     "facebookSync": true,
     "lastPlayed": 5,
@@ -43,7 +43,7 @@ var myUser = {
     "timeLogged" : function(timeLogged) {
         if (timeLogged <= 18) {
             this.heavyUser = true;
-            var powerUser = "You can't be stopped!!";
+            var powerUser = "You can't be stopped!";
             return powerUser;
         } else {
             this.heavyUser = false;
@@ -51,7 +51,16 @@ var myUser = {
     }
     
 };
- 
+var friendList = function() {
+    for (var key in friendInfo.gameFriends) {
+        if (friendInfo.gameFriends[key].curLevel > myUser.curLevel) {
+            console.log(friendInfo.gameFriends[key].fName + " is ahead of you at level " + friendInfo.gameFriends[key].curLevel);
+        } else {
+            console.log(friendInfo.gameFriends[key].fName + " is behind you at level " + friendInfo.gameFriends[key].curLevel);
+
+        }
+    }
+}
 
 
 
@@ -61,5 +70,7 @@ var myUser = {
 
 
 // Output
-console.log("Hi " + myUser.lastLoggedInDays);
-console.log();
+console.log(myUser.lastLoggedInDays());
+console.log(myUser.timeLogged(myUser.lastPlayed));
+console.log(myUser.fName + ", You have " + friendCount + " friends competing for the top spot.");
+console.log(friendList());
