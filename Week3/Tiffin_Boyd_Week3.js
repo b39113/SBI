@@ -11,7 +11,7 @@ STORY
 Welcome back 'Mokono'!
 You just completed level 7 and are only 3 levels away from earning the flame tower.
 While you were out, your friend Tom achieved level 12, don't let them get too far ahead!
-You are ahead of 12 friends and behind 3 of them, Awesome Job...
+You are ahead of 12 friends and behind 3 of them, Awesome Job, keep it up!
 
 You do not have the tutorials on, if you need any assistance, hit us up on facebook!
 
