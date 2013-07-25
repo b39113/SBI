@@ -61,6 +61,7 @@ var friendList = function(uFName,uLName) {
             }
             console.log(friendInfo.gameFriends[key].fName + " " + friendInfo.gameFriends[key].lName +" has the same first name as you.");
         } else {
+            break;
         }
     }
 }
