@@ -1,27 +1,10 @@
-//alert("JavaScript works!");
-
 // Boyd Tiffin
 // SDI 1307
 // Project 3
 // Let's Roll!
 
-/*
-STORY
-
-Welcome back 'Mokono'!
-You just completed level 7 and are only 3 levels away from earning the flame tower.
-While you were out, your friend Tom achieved level 12, don't let them get too far ahead!
-You are ahead of 12 friends and behind 3 of them, Awesome Job, keep it up!
-
-You do not have the tutorials on, if you need any assistance, hit us up on facebook!
-
-*/
-
-
 // Global Variables Defined
 var maxLevel = 30;
-var friendCount = friendInfo.gameFriends.length;
-//
 var myUser = {
     "fName" : "Mokono",
     "lName" : "Smith",
@@ -29,7 +12,7 @@ var myUser = {
     "curLevel" : 10,
     "tutOn" : false,
     "facebookSync": true,
-    "lastPlayed": 5,
+    "lastPlayed": 15,
     "lastLoggedInDays": function() {
         if (this.lastPlayed < 24) {
             console.log(this.fName + ", you were last on " + this.lastPlayed + " hours ago.");
@@ -47,30 +30,51 @@ var myUser = {
             return powerUser;
         } else {
             this.heavyUser = false;
+            var notPowerUser = false;
+            return notPowerUser;
         }
+    },
+    "towerList" : [
+        "Fire",
+        "Water",
+        "Cannon",
+        "Laser"
+    ],
+    "towerLevel" : [
+        1,
+        2,
+        3,
+        4
+    ],
+    "myUpgrades" : {
+        "Fire": 2,
+        "Water": 1,
+        "Cannon" : 2,
     }
-    
 };
-var friendList = function() {
+var friendList = function(uName) {
     for (var key in friendInfo.gameFriends) {
-        if (friendInfo.gameFriends[key].curLevel > myUser.curLevel) {
+        if (friendInfo.gameFriends[key].fName === myUser.fName) {
             console.log(friendInfo.gameFriends[key].fName + " is ahead of you at level " + friendInfo.gameFriends[key].curLevel);
         } else {
             console.log(friendInfo.gameFriends[key].fName + " is behind you at level " + friendInfo.gameFriends[key].curLevel);
-
         }
     }
 }
-
-
-
-
-
-
-
-
+var myTowers = function() {
+    var towers = 0;
+    while (towers <= 3) {
+        console.log("You earn the " + myUser.towerList[towers] + " tower at level " + myUser.towerLevel[towers]);
+        towers ++;
+    }
+}
+var friendCount = function() {
+    var fCount = friendInfo.gameFriends.length;
+    return fCount;
+}
 // Output
 console.log(myUser.lastLoggedInDays());
 console.log(myUser.timeLogged(myUser.lastPlayed));
-console.log(myUser.fName + ", You have " + friendCount + " friends competing for the top spot.");
-console.log(friendList());
+console.log(myUser.fName + ", You have " + friendCount() + " friends competing for the top spot.");
+console.log(friendList(myUser.fName));
+console.log(myTowers());
