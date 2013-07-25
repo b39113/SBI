@@ -13,40 +13,40 @@ var friendInfo = {
             "curLevel": 8,
             "lastPlayed": 3,
             "facebookSync": true
-        }
+        },
         {
-            "fName": "Fred",
-            "lName": "Jones",
-            "curLevel": 8,
-            "lastPlayed": 3,
+            "fName": "Nora",
+            "lName": "King",
+            "curLevel": 2,
+            "lastPlayed": 20,
+            "facebookSync": false
+        },
+        {
+            "fName": "Corina",
+            "lName": "Bernstein",
+            "curLevel": 13,
+            "lastPlayed": 36,
             "facebookSync": true
-        }
+        },
         {
-            "fName": "Fred",
-            "lName": "Jones",
-            "curLevel": 8,
-            "lastPlayed": 3,
-            "facebookSync": true
-        }
+            "fName": "CJ",
+            "lName": "Sparks",
+            "curLevel": 16,
+            "lastPlayed": 18,
+            "facebookSync": false
+        },
         {
-            "fName": "Fred",
-            "lName": "Jones",
-            "curLevel": 8,
-            "lastPlayed": 3,
-            "facebookSync": true
-        }
+            "fName": "Boyd",
+            "lName": "Tiffin",
+            "curLevel": 10,
+            "lastPlayed": 12,
+            "facebookSync": false
+        },
         {
-            "fName": "Fred",
-            "lName": "Jones",
-            "curLevel": 8,
-            "lastPlayed": 3,
-            "facebookSync": true
-        }
-        {
-            "fName": "Fred",
-            "lName": "Jones",
-            "curLevel": 8,
-            "lastPlayed": 3,
+            "fName": "Kaylee",
+            "lName": "Tiffin",
+            "curLevel": 4,
+            "lastPlayed": 400,
             "facebookSync": true
         }
     ]

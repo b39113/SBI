@@ -19,12 +19,25 @@ You do not have the tutorials on, if you need any assistance, hit us up on faceb
 
 
 // Global Variables Defined
-var maxLevel = 27;
+var maxLevel = 30;
 
 //
 var myUser = {
-    "userName" : "Mokono",
+    "fName" : "Mokono",
+    "lName" : "Smith",
     "curLevel" : 8,
-    "tutOn" : false
-}
-console.log(myUser.userName + " is currently level " + myUser.curLevel + ".");
+    "tutOn" : false,
+    "facebookSync": true,
+    "lastPlayed": 55,
+    "lastLoggedInDays": function() {
+        if (this.lastPlayed < 24) {
+            console.log(this.fName + ", you were last on " + this.lastPlayed + " hours ago.");
+        } else {
+            var daysPlayed = this.lastPlayed;
+            daysPlayed = daysPlayed/24;
+            daysPlayed = Math.round(daysPlayed);
+            console.log(this.fName + ", you were last on " + daysPlayed + " days ago");
+        }
+    },
+    "test": "Works"
+};
