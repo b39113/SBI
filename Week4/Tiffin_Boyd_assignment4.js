@@ -50,19 +50,27 @@ var emailValid = function(myEmail) {
 }
 console.log(emailValid("aaa@bbb.com"));
 
-// Is the string a URL HTTP:// or HTTPS:// - return Boolean
+// Is the string a URL http:// or https:// - return Boolean
 var webPage = function(pageString) {
     var end = pageString.indexOf(":");
     var checkPro = pageString.substring(0,end);
-    if (checkPro === "HTTP" || checkPro === "HTTPS") {
+    if (checkPro === "http" || checkPro === "https") {
         var validUrl = true;
     } else {
         var validUrl = false;
     }
     return validUrl;
 }
-console.log(webPage("HTTP://www.ddd.com"));
+console.log(webPage("http://www.ddd.com")); // This is not case specific
+
 // Input String, change the first letter of each word to be uppercase, return string
 
 // Change string from "a,b,c" + "," + "/" --> "a/b/c"
 
+// Format a number to use a specific number of decimal places as for money: 2.1 --> 2.10
+var decimalCreate = function(longNum,decNum) {
+//    var decimalNumber = Math.round(longNum * 100) / 100;
+    var decimalNumber = Math.round(longNum*(Math.pow(10,decNum)))/(Math.pow(10,decNum));
+    return decimalNumber;
+}
+console.log(decimalCreate(3.123412,9));
