@@ -93,6 +93,23 @@ var fuzzyMath = function(num1,num2,num3) {
 }
 console.log(fuzzyMath(25,50,50));
 
+// Find the number of hours or days difference between two dates
+var timeDiff = function(date1,date2,format) {
+    date1 = Date.parse(date1);
+    date2 = Date.parse(date2);
+    var dateDiff = (date2 - date1);
+    if (format === "Hour") {
+        dateDiff = dateDiff/(1000*60*60) + " Hours";
+    } else {
+        dateDiff = dateDiff/(1000*60*60*24) + " Days";
+    }
+    console.log(dateDiff);
+
+}
+console.log(timeDiff("3/1/2013","3/2/2014","Hour"));
+
+
+
 
 
 
