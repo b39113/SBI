@@ -64,6 +64,25 @@ var webPage = function(pageString) {
 console.log(webPage("http://www.ddd.com")); // This is not case specific
 
 // Input String, change the first letter of each word to be uppercase, return string
+var caseString = function(myString) {
+    var stringArray = myString.substring(0,myString.length);
+    var myNewString = "";
+    for (k=0; k<myString.length; k++) {
+        if (k === 0) {
+            myNewString += stringArray[k].toUpperCase();
+        } else if (space === true) {
+            myNewString += stringArray[k].toUpperCase();
+            space = false;
+        } else if (stringArray[k] == " ") {
+            var space = true;
+            myNewString += stringArray[k];
+        } else {
+            myNewString += stringArray[k].toLowerCase();
+        }
+    }
+    return myNewString;
+}
+console.log(caseString("tHIS is a TEST sTRING"));
 
 // Change string from "a,b,c" + "," + "/" --> "a/b/c"
 
@@ -83,7 +102,7 @@ var fuzzyMath = function(num1,num2,num3) {
     } else {
         var fuzzyMathString = num1 + " and " + num2 + " are equal";
     }
-// Determine if num1 is within num3% of num2
+    // Determine if num1 is within num3% of num2
     if (num1 <= (num2 * (num3/100))) {
         fuzzyMathString += " and " + num1 + " is within " + num3 + "% of " + num2;
     } else {
@@ -103,14 +122,21 @@ var timeDiff = function(date1,date2,format) {
     } else {
         dateDiff = dateDiff/(1000*60*60*24) + " Days";
     }
-    console.log(dateDiff);
+    return dateDiff;
 
 }
 console.log(timeDiff("3/1/2013","3/2/2014","Hour"));
 
+// Given a string version of a number, such as Ò42Ó, return the value as an actual Number data type
+var stringToNum = function(numString) {
+    var validNum = Number(numString);
+    if (isNaN(validNum)) {
+        validNum = "\"" + numString + "\" is not a valid number";
+    } 
+    return validNum;
+}
+console.log(stringToNum("25"));
 
-
-
-
+// Find the smallest value in an array than is greater than a given number.
 
 
