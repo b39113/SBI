@@ -138,5 +138,23 @@ var stringToNum = function(numString) {
 console.log(stringToNum("25"));
 
 // Find the smallest value in an array than is greater than a given number.
+var smallValue = function(array,myNum) {
+    array.sort(function(a,b){return a-b})
+    var mySortedNum = new Array();
+    var n=0;
+    for (k=0; k<array.length; k++) {
+        if (array[k] > myNum) {
+            mySortedNum[n] = array[k];
+            n++;
+        }
+    } return mySortedNum[0];
+}
+console.log(smallValue([1,4,7,8,10,14,15],12));
+
+
+
+
+
+
 
 
