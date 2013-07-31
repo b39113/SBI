@@ -49,9 +49,20 @@ var emailValid = function(myEmail) {
     return emailPassed;
 }
 console.log(emailValid("aaa@bbb.com"));
-// Is the string a URL HTTP:// or HTTPS:// - returm Boolean
 
-// Input String, change the first lett of each word to be uppercase, return string
+// Is the string a URL HTTP:// or HTTPS:// - return Boolean
+var webPage = function(pageString) {
+    var end = pageString.indexOf(":");
+    var checkPro = pageString.substring(0,end);
+    if (checkPro === "HTTP" || checkPro === "HTTPS") {
+        var validUrl = true;
+    } else {
+        var validUrl = false;
+    }
+    return validUrl;
+}
+console.log(webPage("HTTP://www.ddd.com"));
+// Input String, change the first letter of each word to be uppercase, return string
 
 // Change string from "a,b,c" + "," + "/" --> "a/b/c"
 
