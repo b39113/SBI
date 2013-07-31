@@ -69,7 +69,6 @@ console.log(webPage("http://www.ddd.com")); // This is not case specific
 
 // Format a number to use a specific number of decimal places as for money: 2.1 --> 2.10
 var decimalCreate = function(longNum,decNum) {
-//    var decimalNumber = Math.round(longNum * 100) / 100;
     var decimalNumber = Math.round(longNum*(Math.pow(10,decNum)))/(Math.pow(10,decNum));
     return decimalNumber;
 }
