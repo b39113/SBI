@@ -25,3 +25,33 @@ var phoneNumber = function(pNumber) {
     return pNumValid;
 }
 console.log(phoneNumber("123-123-1234"));
+
+// aaa@bbb.ccc String Validation
+var emailValid = function(myEmail) {
+    var at = myEmail.indexOf("@");
+    var emailName = myEmail.substring(0,at);
+    var startDomain = myEmail.lastIndexOf(".")+1;
+    var emailEnd = myEmail.length;
+    var emailDomain = myEmail.substring(startDomain,emailEnd);
+    if (at >=1) {
+        if (startDomain >=3) {
+            if ((emailEnd - startDomain) >= 2) {
+                var emailPassed = true;
+            } else {
+                var emailPassed = false;
+            }
+        } else {
+            var emailPassed = false;
+        }
+    } else {
+        var emailPassed = false;
+    }
+    return emailPassed;
+}
+console.log(emailValid("aaa@bbb.com"));
+// Is the string a URL HTTP:// or HTTPS:// - returm Boolean
+
+// Input String, change the first lett of each word to be uppercase, return string
+
+// Change string from "a,b,c" + "," + "/" --> "a/b/c"
+
