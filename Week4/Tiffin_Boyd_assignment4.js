@@ -73,3 +73,27 @@ var decimalCreate = function(longNum,decNum) {
     return decimalNumber;
 }
 console.log(decimalCreate(3.123412,9));
+
+// Fuzzy-match a number: is the number above or below a number within a certain percent?
+var fuzzyMath = function(num1,num2,num3) {
+    if (num1 < num2) {
+        var fuzzyMathString = num1 + " is less than " + num2;
+    } else if (num2 < num1) {
+        var fuzzyMathString = num2 + " is less than " + num1;
+    } else {
+        var fuzzyMathString = num1 + " and " + num2 + " are equal";
+    }
+// Determine if num1 is within num3% of num2
+    if (num1 <= (num2 * (num3/100))) {
+        fuzzyMathString += " and " + num1 + " is within " + num3 + "% of " + num2;
+    } else {
+        fuzzyMathString += " and " + num1 + " is not within " + num3 + "% of " + num2;
+    }
+    return fuzzyMathString;
+}
+console.log(fuzzyMath(25,50,50));
+
+
+
+
+
