@@ -84,6 +84,7 @@ var caseString = function(myString) {
 console.log(caseString("tHIS is a TEST sTRING"));
 
 // Change string from "a,b,c" + "," + "/" --> "a/b/c"
+// Not Completed
 
 // Format a number to use a specific number of decimal places as for money: 2.1 --> 2.10
 var decimalCreate = function(longNum,decNum) {
@@ -139,7 +140,7 @@ console.log(stringToNum("25"));
 
 // Find the smallest value in an array than is greater than a given number.
 var smallValue = function(array,myNum) {
-    array.sort(function(a,b){return a-b})
+    array.sort(function(a,b){return a-b});
     var mySortedNum = new Array();
     var n=0;
     for (k=0; k<array.length; k++) {
@@ -158,13 +159,10 @@ var numTotal = function(numArray) {
         if (typeof(numArray[k]) === "number") {
             addNumber += numArray[k];
         }
-    
     }
     return addNumber;
 }
 console.log(numTotal([1, "pickles", 3, "onions", 5, "10", 6, "SDI", 6,7,"666"]));
 
-
-
-
-
+// return the array sorted by the value of that key in each of the objects:
+// Not Completed
