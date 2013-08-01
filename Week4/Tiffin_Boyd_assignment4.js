@@ -150,10 +150,20 @@ var smallValue = function(array,myNum) {
         }
     } return mySortedNum[0];
 }
-console.log(smallValue([1,4,7,8,10,14,15],12));
+console.log(smallValue([1,4,7,8,10,14,15],5));
 
-
-
+// Find the total value of just the numbers in an array
+var numTotal = function(numArray) {
+    var addNumber = 0;
+    for (k=0; k<numArray.length; k++) {
+        if (typeof(numArray[k]) === "number") {
+            addNumber += numArray[k];
+        }
+    
+    }
+    return addNumber;
+}
+console.log(numTotal([1, "pickles", 3, "onions", 5, "10", 6, "SDI", 6,7,"666"]));
 
 
 
