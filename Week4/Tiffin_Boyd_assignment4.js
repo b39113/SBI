@@ -3,8 +3,7 @@
 // Project 4
 // Keep it coming!!
 
-// String Manipulation Functions
-
+// Does a string follow a 123-456-7890 pattern like a phone number?
 var phoneNumber = function(pNumber) {
     var pNumDash = pNumber[3] += pNumber[7];
     var pNumDigit = pNumber[0] += pNumber[1] += pNumber[2] += pNumber[4] += pNumber[5] += pNumber[6] += pNumber[8] += pNumber[9] += pNumber[10] += pNumber[11];
@@ -26,7 +25,7 @@ var phoneNumber = function(pNumber) {
 }
 console.log(phoneNumber("123-123-1234"));
 
-// aaa@bbb.ccc String Validation
+// Does a string follow an aaa@bbb.ccc pattern like an email address?
 var emailValid = function(myEmail) {
     var at = myEmail.indexOf("@");
     var emailName = myEmail.substring(0,at);
